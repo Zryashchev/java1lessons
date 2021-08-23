@@ -1,0 +1,55 @@
+package ru.geekbrains.lesson5;
+
+//Класс
+public class Employee {
+    private String fullName;
+    private String function;
+    private String email;
+    private String telephone;
+    private int salary;
+    private int age;
+
+    public Employee(String fullName, String function, String email, String telephone, int salary, int age) {
+        this.fullName = fullName;
+        this.function = function;
+        this.email = email;
+        this.telephone = telephone;
+        this.salary = salary;
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setSalary(int salary) {
+        if (age >= 50) {
+        this.salary = salary;
+        }
+    }
+
+    public void info() {
+        System.out.println(fullName + " " + function + " " + email + " " + telephone + " " + salary + " " + age);
+    }
+}
+
+//Объект
+public class Main {
+
+    public static void main(String[] args) {
+        Employee[] empArray = new Employee[5]; // Вначале объявляем массив объектов
+        empArray[0] = new Employee("Ivanov Ivan", "PR-manager", "ivivan@mailbox.com", "892112312", 30000, 30); // потом для каждой ячейки массива задаем объект
+        empArray[1] = new Employee("Petrov Stefan", "Developer", "petrov@mailbox.com", "892212313", 32000, 36);
+        empArray[2] = new Employee("Vodkin Vasiliy", "Engineer", "vodkin@mailbox.com", "892312314", 34000, 42);
+        empArray[3] = new Employee("Sidorov Alex", "Instructor", "sidorov@mailbox.com", "892412315", 36000, 48);
+        empArray[4] = new Employee("Turgenev Ad", "Manager", "turgenev@mailbox.com", "892512316", 38000, 50);
+
+        empArray[4].setSalary(52000);
+
+        for (int i = 0; i < empArray.length; i++) {
+            if(empArray[i].getAge() > 40){
+                empArray[i].info();
+    }
+    }
+    }
+}
