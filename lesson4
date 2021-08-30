@@ -1,4 +1,4 @@
-//Класс
+//КЛАСС
 package ru.geekbrains.lesson5;
 
 public class Employee {
@@ -33,7 +33,7 @@ public class Employee {
     }
 }
 
-//Объект
+//ОБЪЕКТ
 public class Main {
 
     public static void main(String[] args) {
