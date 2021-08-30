@@ -1,0 +1,17 @@
+package ru.geekbrains.lesson6;
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog("Бобик", 2, 500, 10){
+        };
+        Cat cat = new Cat("Дымок", 3, 200, 0) {
+        };
+        System.out.println(dog);
+        dog.run(450);
+        dog.sail(9);
+        System.out.println(cat);
+        cat.run(180);
+        cat.sail(1);
+
+    }
+}
